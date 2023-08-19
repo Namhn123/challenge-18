@@ -61,6 +61,11 @@ module.exports = {
         return res.status(404).json({ message: 'No user with that ID exists' });
       } else {
         await Thought.deleteMany({ _id: { $in: user.thoughts } });
+        await User.updateMany(
+        { friends: req.params.userId },
+        { $pull: { friends: req.params.userId } },
+        { new: true }
+        );
       }
 
       if (!user) {
