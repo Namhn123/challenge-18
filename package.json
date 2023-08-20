@@ -1,7 +1,7 @@
 {
-  "name": "28-Stu_Mini-Project",
+  "name": "challenge-18",
   "version": "1.0.1",
-  "description": "Mongoose back-end project - Main",
+  "description": "NoSQL API",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
